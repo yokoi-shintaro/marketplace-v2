@@ -11,6 +11,11 @@ const fetcher = async (
     headers.set('x-api-key', process.env.NEXT_PUBLIC_RESERVOIR_API_KEY)
   }
 
+  // CORSヘッダー
+  headers.set('Access-Control-Allow-Origin','https://marketplace-v2-git-main-yokois-projects.vercel.app/,https://marketplace-v2-git-main-yokois-projects.vercel.app/');
+  headers.set('Access-Control-Allow-Methods','GET,POST');
+  headers.set('Access-Control-Allow-Headers','Content-Type, Authorization');
+
   const path = new URL(url)
   setParams(path, params)
 
