@@ -12,7 +12,7 @@ const fetcher = async (
   }
 
   // CORSヘッダー
-  headers.set('Access-Control-Allow-Origin','https://marketplace-v2-2khsv5zvt-yokois-projects.vercel.app');
+  headers.set('Access-Control-Allow-Origin','https://marketplace-v2-git-main-yokois-projects.vercel.app/');
   headers.set('Access-Control-Allow-Methods','GET,POST');
   headers.set('Access-Control-Allow-Headers','Content-Type, Authorization');
 
