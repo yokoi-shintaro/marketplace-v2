@@ -56,42 +56,42 @@ const usdcCurrencyBase = {
 }
 
 export const DefaultChain: ReservoirChain = {
-  ...mainnet,
+  ...polygon,
   // Any url to display the logo of the chain in light mode
-  lightIconUrl: '/icons/eth-icon-dark.svg',
+  lightIconUrl: '/icons/polygon-icon-dark.svg',
   // Any url to display the logo of the chain in dark mode
-  darkIconUrl: '/icons/eth-icon-light.svg',
+  darkIconUrl: '/icons/polygon-icon-light.svg',
   // The base url of the reservoir api, this is used in the app when
   // directly interacting with the reservoir indexer servers (in the api proxy for example)
   // or when prefetching server side rendered data
-  reservoirBaseUrl: reservoirChains.mainnet.baseApiUrl,
+  reservoirBaseUrl: reservoirChains.polygon.baseApiUrl,
   // Used on the client side portions of the marketplace that need an api key added
   // Prevents the api key from being leaked in the clientside requests
   // If you'd like to disable proxying you can just change the proxyApi to the reservoirBaseUrl
   // Doing so will omit the api key unless further changes are made
-  proxyApi: '/api/reservoir/ethereum',
+  proxyApi: '/api/reservoir/polygon',
   // A prefix used in the asset specific routes on the app (tokens/collections)
-  routePrefix: 'ethereum',
+  routePrefix: 'polygon',
   // Coingecko id, used to convert the chain's native prices to usd. Can be found here:
   // https://www.coingecko.com/en/api/documentation#operations-coins-get_coins_list
-  coingeckoId: 'ethereum',
-  collectionSetId: process.env.NEXT_PUBLIC_ETH_COLLECTION_SET_ID,
-  community: process.env.NEXT_PUBLIC_ETH_COMMUNITY,
-  wssUrl: 'wss://ws.reservoir.tools',
+  coingeckoId: 'polygon',
+  collectionSetId: process.env.NEXT_PUBLIC_POLYGON_COLLECTION_SET_ID,
+  community: process.env.NEXT_PUBLIC_POLYGON_COMMUNITY,
+  wssUrl: 'wss://ws.reservoir.tools/polygon',
   listingCurrencies: [
     nativeCurrencyBase,
     {
       ...usdcCurrencyBase,
-      contract: usdcContracts[mainnet.id],
+      contract: usdcContracts[polygon.id],
     },
   ],
   oracleBidsEnabled: true,
-  checkPollingInterval: reservoirChains.mainnet.checkPollingInterval,
-  paperContractId: process.env.PAPER_ETHEREUM_CONTRACT_ID,
+  checkPollingInterval: reservoirChains.polygon.checkPollingInterval,
+  paperContractId: process.env.PAPER_POLYGON_CONTRACT_ID,
 }
 
 export default [
-  DefaultChain,
+//  DefaultChain,
   {
     ...polygon,
     lightIconUrl: '/icons/polygon-icon-dark.svg',
