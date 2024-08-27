@@ -397,11 +397,6 @@ headers
       ? (promises[1].value.data as Props['ssr']['featuredCollections'])
       : {}
 
-      // デバッグログを追加
-if (promises?.[1].status === 'fulfilled') {
-  console.log('promises[1].value.data:', promises[1].value.data);
-}
-
   const trendingMints: Props['ssr']['trendingMints'] =
     promises?.[1].status === 'fulfilled' && promises[1].value.data
       ? (promises[1].value.data as Props['ssr']['trendingMints'])
