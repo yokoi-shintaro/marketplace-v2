@@ -243,28 +243,7 @@ const Home: NextPage<Props> = ({ ssr }) => {
               </Flex>
             </Flex>
           )}
-          <TabsContent value="collections">
-            <Box
-              css={{
-                height: '100%',
-              }}
-            >
-              <Flex direction="column">
-                {isSSR || !isMounted ? null : (
-                  <CollectionRankingsTable
-                    collections={trendingCollections || []}
-                    volumeKey={volumeKey}
-                    loading={isTrendingCollectionsValidating}
-                  />
-                )}
-                <Box
-                  css={{
-                    display: isTrendingCollectionsValidating ? 'none' : 'block',
-                  }}
-                ></Box>
-              </Flex>
-            </Box>
-          </TabsContent>
+  
           <TabsContent value="mints">
             <Box
               css={{
