@@ -294,7 +294,7 @@ const Home: NextPage<Props> = ({ ssr }) => {
         </Box>
       </Box>
 
-      <Footer />
+
     </Layout>
   )
 }
@@ -335,6 +335,7 @@ export const getServerSideProps: GetServerSideProps<{
     headers
   )
 
+/*
   let featuredCollectionQuery: paths['/collections/trending/v1']['get']['parameters']['query'] =
     {
       period: '24h',
@@ -342,11 +343,28 @@ export const getServerSideProps: GetServerSideProps<{
       sortBy: 'sales',
     }
 
+
   const featuredCollectionsPromise = fetcher(
     `${reservoirBaseUrl}/collections/trending/v1`,
     featuredCollectionQuery,
     headers
   )
+*/
+
+let featuredCollectionQuery: paths['/collections/search/v1']['get']['parameters']['query'] =
+{
+  prefix: 'eggrypto',
+  limit: 1,
+}
+
+
+const featuredCollectionsPromise = fetcher(
+`${reservoirBaseUrl}/collections/search/v1`,
+featuredCollectionQuery,
+headers
+)
+
+
 
   let trendingMintsQuery: paths['/collections/trending-mints/v1']['get']['parameters']['query'] =
     {
@@ -373,6 +391,7 @@ export const getServerSideProps: GetServerSideProps<{
     promises?.[0].status === 'fulfilled' && promises[0].value.data
       ? (promises[0].value.data as Props['ssr']['trendingCollections'])
       : {}
+
   const featuredCollections: Props['ssr']['featuredCollections'] =
     promises?.[1].status === 'fulfilled' && promises[1].value.data
       ? (promises[1].value.data as Props['ssr']['featuredCollections'])
