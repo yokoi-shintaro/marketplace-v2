@@ -124,5 +124,5 @@ export default [
     oracleBidsEnabled: true,
     checkPollingInterval: reservoirChains.polygon.checkPollingInterval,
   },
- 
+
 ] as ReservoirChain[]

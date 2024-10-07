@@ -745,7 +745,7 @@ export const chainPaymentTokensMap = {
       decimals: 18,
     },
   ],
-  
+
   // forma
   984122: [
     {
@@ -760,6 +760,60 @@ export const chainPaymentTokensMap = {
       address: '0xd5eace1274dbf70960714f513db207433615a263',
       symbol: 'WTIA',
       name: 'WTIA',
+      decimals: 18,
+    },
+  ],
+
+  // Apechain
+  33139: [
+    {
+      chainId: 33139,
+      address: zeroAddress,
+      symbol: 'APE',
+      name: 'APE',
+      decimals: 18,
+    },
+    {
+      chainId: 33139,
+      address: '0x8643a49363e80c7a15790703b915d1b0b6b71d56',
+      symbol: 'WAPE',
+      name: 'WAPE',
+      decimals: 18,
+    },
+  ],
+
+  // shape
+  360: [
+    {
+      chainId: 360,
+      address: zeroAddress,
+      symbol: 'ETH',
+      name: 'Shape ETH',
+      decimals: 18,
+    },
+    {
+      chainId: 360,
+      address: '0x4200000000000000000000000000000000000006',
+      symbol: 'WETH',
+      name: 'Shape WETH',
+      decimals: 18,
+    },
+  ],
+
+  // Flow
+  747: [
+    {
+      chainId: 747,
+      address: zeroAddress,
+      symbol: 'FLOW',
+      name: 'Flow',
+      decimals: 18,
+    },
+    {
+      chainId: 747,
+      address: '0xd3bf53dac106a0290b0483ecbc89d40fcc961f3e',
+      symbol: 'WFLOW',
+      name: 'WFLOW',
       decimals: 18,
     },
   ],
